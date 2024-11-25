@@ -1,0 +1,81 @@
+{% load static %}
+
+<header class="header">
+	<div class="container">
+		<div class="header__top">
+			<div class="header__top-links">
+				<a class="header__top-link accent">О компании</a>
+				<a class="header__top-link">Новости</a>
+				<a class="header__top-link">Карьера</a>
+				<a class="header__top-link">Агентствам недвижимости</a>
+				<a class="header__top-link">Коммерция</a>
+				<a class="header__top-link">ModeX</a>
+				<a class="header__top-link">Партнеры BI Club</a>
+			</div>
+
+			<div class="header__top-contacts">
+				<a class="header__top-contact" href="https://whatsapp.com">
+					<img src="{% static 'img/icons/whatsapp.svg' %}" alt="" />
+				</a>
+				<a class="header__top-contact" href="https://telegram.org">
+					<img src="{% static 'img/icons/telegram.svg' %}" alt="" />
+				</a>
+				<a class="header__top-contact" href="tel:77777777777">
+					<img src="{% static 'img/icons/phone.svg' %}" alt="" />
+					<span>360</span>
+				</a>
+				<button class="header__top-request-btn">
+					<span>Заказать звонок</span>
+				</button>
+				<button class="header__top-request-btn">
+					<span>RU</span>
+					<div class="arrow">
+						<svg
+							height="14"
+							width="16"
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 32 32"
+						>
+							<path d="M16 21.3333L8 13.3333H24L16 21.3333Z"></path>
+						</svg>
+					</div>
+				</button>
+			</div>
+		</div>
+
+		<div class="header__main">
+			<a class="header__logo" href="/">
+				<img src="{% static 'img/logo.svg' %}" alt="" />
+			</a>
+
+			<a href='/projects' class="header__btn accent">
+				<img src="{% static 'img/icons/real-estate.svg' %}" alt="" />
+				<span>Проекты</span>
+			</a>
+			<button class="header__btn">
+				<img src="{% static 'img/icons/circle.svg' %}" alt="" />
+				<span>Live</span>
+			</button>
+			<button class="header__btn">
+				<span>Ипотека</span>
+			</button>
+			<button class="header__btn">
+				<span>Акции</span>
+			</button>
+			<button class="header__btn">
+				<span>Способы покупки</span>
+			</button>
+			<button class="header__btn">
+				<span>Сервисы</span>
+			</button>
+			<button class="header__btn">
+				<span>BI Гид</span>
+			</button>
+
+			<button class="header__favorites-btn">
+				<img src="{% static 'img/icons/heart.svg' %}" alt="" />
+			</button>
+			<button class="header__login-btn">Войти</button>
+		</div>
+	</div>
+</header>

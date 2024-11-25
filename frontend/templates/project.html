@@ -1,0 +1,61 @@
+{% extends 'layouts/base.html' %}
+
+{% load static %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block main %}
+{% include "layouts/header.html" %}
+<div class='container'>
+	<div class='project__main'>
+		<img src="../media/{{ project.main_img }}" alt="">
+		<div class='project__main-content'>
+			<p class='project__main-info'>Проект</p>
+			<p class='project__main-title'>{{ project.title }}</p>
+			<p class='project__main-copy'>{{ project.copy }}</p>
+		
+			<div class="project__main-tags">
+				{% for tag in tags %}
+					<button class="project__main-tag">{{ tag }}</button>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	<div class='project__main-bottom'>
+		<p class='project__main-address'>
+			<img src="{% static 'img/icons/address.svg' %}" alt="">
+			<span>{{ project.address }}</span>
+		</p>
+	</div>
+
+	<div class='project__territory'>
+		<h3 class='project__territory-title'>
+			Территория большой жизни
+		</h3>
+		<div class='project__territory-panorama'>
+			<img src="../media/{{ project.panorama_img }}" alt="">
+		</div>
+	</div>
+
+	<div class='callback-form'>
+		<h2>Заказать звонок</h2>
+		<form method="post">
+			{% csrf_token %}
+			{{ form.as_p }}
+			<button type="submit">Жду звонка</button>
+		</form>
+	</div>
+
+	<div class='project__warning'>
+		<p class='project__warning-copy'>
+			Настоящая реклама, в соответствии со ст. 395 ГК РК, не является публичной офертой. По данному ЖК получено разрешение № 64 от 14.11.2023 на привлечение денег дольщиков. Уполномоченная компания ТОО «Alem Stroy NC», застройщик ТОО «BI Development Astana».
+		</p>
+		<img src="{% static 'img/icons/warning.svg' %}" alt="">
+	</div>
+
+	{% include "includes/card.html" %}
+
+
+</div>
+{% include "layouts/footer.html" %}
+{% endblock %}

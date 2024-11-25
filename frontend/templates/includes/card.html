@@ -1,0 +1,42 @@
+{% load static %}
+
+<section class="my-card">
+	<div class="card__item">
+		<img class="card__item-img" src="{% static 'img/card/mobile.png' %}" />
+		<p class="card__item-copy">Мобильное приложение</p>
+		<p class="card__item-title">
+			BIGApp – ваш ключ к легкому управлению домом, партнерским привилегиям и
+			сервисам BI Group!
+		</p>
+		<p class="card__item-desc">
+			Совершайте покупки и управляйте своим <br />жильем с легкостью вместе с
+			BIGApp!
+		</p>
+
+		<div class="card__item-box">
+			<img class="card__item-qr" src="{% static 'img/card/qr.png' %}" />
+			<div class="card__item-btns">
+				<button class="card__item-btn">
+					<img src="{% static 'img/card/app-store.svg' %}" alt="" />
+				</button>
+				<button class="card__item-btn">
+					<img src="{% static 'img/card/google-play.svg' %}" alt="" />
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="card__item">
+		<img class="card__item-img promo" src="{% static 'img/card/promo.png' %}" />
+		<p class="card__item-copy">Программа лояльности bi club</p>
+		<p class="card__item-title">
+			Присоединяйтесь к BI Club 👉<br> и превратите любую покупку в<br> приз! ✨
+		</p>
+		<p class="card__item-desc">
+			Участвуйте в наших еженедельных<br> розыгрышах и пусть удача будет на <br>вашей
+			стороне!
+		</p>
+
+		<button class="card__item-friend">Стать другом</button>
+	</div>
+</section>

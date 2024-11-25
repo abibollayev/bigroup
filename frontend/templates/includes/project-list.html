@@ -1,0 +1,47 @@
+{% load static %}
+<h2 class='projects__title'>Проекты BI Group</h2>
+
+<div class='project-filter'>
+  <button class='project-filter-btn' id='project-filter'>
+    Все города Казахстана
+    <img src="{% static 'img/icons/arrow.svg' %}" alt="">
+  </button>
+  <div class='project-filter-popup' id='project-filter-popup'>
+    <button id='project-filter-astana'>
+      Астана
+    </button>
+    <button id='project-filter-almaty'>
+      Алматы
+    </button>
+  </div>
+  <button class='project-filter-btn'>
+    Строящиеся
+    <img src="{% static 'img/icons/arrow.svg' %}" alt="">
+  </button>
+  <button class='project-filter-btn'>
+    Квартира
+    <img src="{% static 'img/icons/arrow.svg' %}" alt="">
+  </button>
+  <button class='project-filter-btn'>
+    Цена
+    <img src="{% static 'img/icons/arrow.svg' %}" alt="">
+  </button>
+</div>
+
+<div class='project-box'>
+  <button class='project-box-btn'>
+    Купить в ипотеку
+  </button>
+  <button class='project-box-btn'>
+    Акции
+  </button>
+  <button class='project-box-btn'>
+    Готовое
+  </button>
+  <button class='project-box-btn'>
+    С ремонтом
+  </button>
+</div>
+
+<div class='project-list' id='project-list'>
+</div>

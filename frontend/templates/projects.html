@@ -1,0 +1,16 @@
+{% extends 'layouts/base.html' %}
+
+{% load static %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block main %}
+{% include "layouts/header.html" %}
+
+<div class='container'>
+  {% include "includes/project-list.html" %}
+</div>
+
+{% include "layouts/footer.html" %}
+<script src="{% static 'js/app.js' %}"></script>
+{% endblock %}

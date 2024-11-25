@@ -1,0 +1,24 @@
+services:
+  mysql:
+    image: mysql:latest
+    container_name: bigroup-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: bigroup
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: xckje@4dsfjn3
+    ports:
+      - "3306:3306"
+    networks:
+      - mysql-network
+    volumes:
+      - mysql-data:/var/lib/mysql
+    restart: always
+
+networks:
+  mysql-network:
+    driver: bridge
+
+volumes:
+  mysql-data:
+    driver: local
